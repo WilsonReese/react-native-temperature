@@ -2,6 +2,7 @@ import { ImageBackground, Text, View } from "react-native";
 import { s } from "./App.style";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import hotBackground from "./assets/hot.png"
+import { Input } from "./components/Input/Input";
 
 export default function App() {
   return (
@@ -10,7 +11,7 @@ export default function App() {
         <SafeAreaView style={s.root}>
           <View style={s.workspace}>
             <Text>Temperature</Text>
-            <Text>Input</Text>
+            <Input></Input>
             <Text>Button</Text>
           </View>
         </SafeAreaView>
