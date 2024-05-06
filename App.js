@@ -11,7 +11,7 @@ export default function App() {
         <SafeAreaView style={s.root}>
           <View style={s.workspace}>
             <Text>Temperature</Text>
-            <Input></Input>
+            <Input defaultValue={0} />
             <Text>Button</Text>
           </View>
         </SafeAreaView>
