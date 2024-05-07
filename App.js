@@ -6,7 +6,11 @@ import coldBackground from "./assets/cold.png";
 import { Input } from "./components/Input/Input";
 import { useEffect, useState } from "react";
 import { DisplayTemperature } from "./components/DisplayTemperature/DisplayTemperature";
-import { convertTemperatureTo, getOppositeUnit, isIceTemperature } from "./utils/temperature";
+import {
+	convertTemperatureTo,
+	getOppositeUnit,
+	isIceTemperature,
+} from "./utils/temperature";
 import { ButtonConvert } from "./components/ButtonConvert/ButtonConvert";
 
 export default function App() {
@@ -17,9 +21,9 @@ export default function App() {
 
 	useEffect(() => {
 		if (isIceTemperature(inputValue, currentUnit)) {
-			setCurrentBackground(coldBackground)
+			setCurrentBackground(coldBackground);
 		} else {
-			setCurrentBackground(hotBackground)
+			setCurrentBackground(hotBackground);
 		}
 	}, [inputValue, currentUnit]);
 
