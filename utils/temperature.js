@@ -23,4 +23,16 @@ function getOppositeUnit(unit) {
 	}
 }
 
-export { UNITS, convertTemperatureTo, getOppositeUnit };
+function isIceTemperature(temperature, unit) {
+	if (unit === UNITS.celcius && temperature <= 0) {
+		return true;
+	}
+	else if (unit === UNITS.fahrenheit && temperature <= 32) {
+		return true;
+	} 
+	else {
+		return false;
+	}
+}
+
+export { UNITS, convertTemperatureTo, getOppositeUnit, isIceTemperature };

@@ -5,7 +5,7 @@ import { getOppositeUnit } from "../../utils/temperature";
 export function ButtonConvert({ unit, onPress }) {
 	return (
 		<TouchableOpacity style={s.button} onPress={onPress} >
-			<Text style={s.buttonText}>{unit} to {getOppositeUnit(unit)}</Text>
+			<Text style={s.buttonText}>Switch to {getOppositeUnit(unit)} to {unit}</Text>
 		</TouchableOpacity>
 	);
 }
