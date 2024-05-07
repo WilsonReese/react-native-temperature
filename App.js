@@ -11,7 +11,7 @@ import { ButtonConvert } from "./components/ButtonConvert/ButtonConvert";
 export default function App() {
 	const [inputValue, setInputValue] = useState(0);
 	const [currentUnit, setCurrentUnit] = useState("°C");
-	const oppositeUnit = getOppositeUnit(currentUnit)
+	const oppositeUnit = getOppositeUnit(currentUnit);
 
 	function getConvertedTemperature() {
 		if (isNaN(inputValue)) {
@@ -37,7 +37,12 @@ export default function App() {
 							onChange={setInputValue}
 							defaultValue={0}
 						/>
-						<ButtonConvert unit={currentUnit} />
+						<ButtonConvert
+							unit={currentUnit}
+							onPress={() => {
+								setCurrentUnit(oppositeUnit);
+							}}
+						/>
 					</View>
 				</SafeAreaView>
 			</SafeAreaProvider>
